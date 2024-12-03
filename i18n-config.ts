@@ -1,12 +1,8 @@
-import type { I18NConfig } from "next/dist/server/config-shared";
+import { Config } from "next-i18n-router/dist/types";
 
-export type Locale = (typeof i18n)["locales"][number];
-export type LocaleParam = Locale | undefined;
-
-export const i18n: I18NConfig = {
+export const i18nConfig: Config = {
   locales: ["en", "fr"],
   defaultLocale: "en",
-  localeDetection: false,
 };
 
 export const translationsBaseDir = "dictionaries";
